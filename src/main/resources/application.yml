@@ -1,0 +1,39 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.17:3306/boot_example
+    username: root
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    show-sql: true
+
+#自定义的属性和值
+carSize: big
+carColor: yello
+carContent: "my carSize is ${carSize}, color is ${carColor}"
+
+#自定义对象
+car:
+  size: small
+  color: red
+  arrayProps: 1,2,3,4,5
+  listNames:
+    - name: BMW
+    - name: 福特
+  listMaps:
+    - name: price
+      value: 1000
+    - name: unit
+      vaule: 元
+  mapProps:
+    key1: value1
+    key2: value2
+
+
+
